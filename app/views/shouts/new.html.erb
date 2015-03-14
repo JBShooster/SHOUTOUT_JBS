@@ -1,0 +1,37 @@
+<h1>Shout It!</h1>
+<div class="alert">
+<% flash.each do |key, value| %>
+  <% if key == "error" %>
+    <%= content_tag :div, value, class: "text-center_alert_alert-warning" %>
+  <% elsif key == "alert" %>
+    <%= content_tag :div, value, class: "text-center_alert_alert-danger" %>
+  <% end %>
+<% end %>
+</div>
+<%= form_for([@profile, @shout], url: profile_shouts_path) do |f|%>
+	
+	<%= f.label :Category %><br />
+  <%= f.collection_select(:category_id, @categories, :id, :category, {:prompt => false}) %> 
+
+  <%= f.label :title  %>
+  <%= f.text_field :title, placeholder: "Title...", autofocus: true %>
+
+  <%= f.label :time %>
+
+
+  <%= f.text_field :time, placeholder: "When..."  %>
+
+
+
+  <%= f.label :location %>
+  <%= f.text_field :location, placeholder: "Address, City, State..." %>
+
+  <%= f.label :description %>
+  <%= f.text_area :description  %>
+
+
+  <%= f.submit("Shout Out!", class: "btn btn-primary") %>
+<% end %>
+<br>
+<%= link_to "Back to Shouts Page", :back %>
+
