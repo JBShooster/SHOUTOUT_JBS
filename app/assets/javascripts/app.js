@@ -19,7 +19,7 @@ $(document).ready(function() {
             console.log("currentShoutID = " + currentShoutID);
 
             if (profileId != value.profile_id) {
-              $(".shouts").prepend("<li><a href=http://shoutout01.herokuapp.com/profiles/"+profileId+"/shouts/"+value.id+">"+value.title+"</a></li>");
+              $(".shouts").first().prepend("<li><a href=http://shoutout01.herokuapp.com/profiles/"+profileId+"/shouts/"+value.id+">"+value.title+"</a></li>");
             }
           }
 

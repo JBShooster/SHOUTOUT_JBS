@@ -1,3 +1,13 @@
+
+
+h1 {
+  width: auto;
+  font-family: Helvetica;
+  text-align: center;
+  font-size: 30pt;
+  text-shadow: 2px 3px 0px #F27D24;
+}
+
 div.text-center_alert_alert-warning {
   font-color: black;
   background-color: #FFE5A4;
@@ -7,6 +17,28 @@ div.text-center_alert_alert-warning {
   padding: 20px;
   width: auto;
 }
+
+.shouts_box {
+  width: 300px;
+  height: 400px;
+  text-align: center;
+  margin: 0 auto;
+  position-align: center;    
+  z-index: 5;
+}
+
+
+.shouts {
+
+  width: 300px;
+  height: 35px;
+  background-color: #E6EBD3;
+  z-index: 10;
+}
+
+
+
+
 div.text-center_alert_alert-danger {
   font-color: black;
   background-color: #FFE5A4;
@@ -17,6 +49,27 @@ div.text-center_alert_alert-danger {
   width: auto;
 }
 
+.login_box {
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  margin: 0 auto;
+  position-align: center;
+}
+
+.login_button {
+  width: 100px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.signup_box {
+  width: 400px;
+  height: 100px;
+  text-align: center;
+  margin: 0 auto;
+  position-align: center;  
+}
 
 .box {
   background-color: #12618A;
@@ -99,13 +152,7 @@ div.text-center_alert_alert-danger {
   color: #F27D24;
   float: left;
 }
-h1 {
-  width: auto;
-  font-family: Helvetica;
-  text-align: center;
-  font-size: 60pt;
-  text-shadow: 2px 3px 0px #F27D24;
-}
+
 .sun_coder_img {
   position: center;
   border-style: solid;

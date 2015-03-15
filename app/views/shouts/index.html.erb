@@ -1,10 +1,11 @@
 <h1>Upcoming Shouts!</h1>
 
-<%= form_tag profile_shouts_path, method: :get do %>
-<%= select_tag :category_id, options_from_collection_for_select(@categories, :id, :category, @category_id) %>
-<%= submit_tag "Filter by Category" %>
-<% end %>
 
+<div class="shouts_box">
+  <%= form_tag profile_shouts_path, method: :get do %>
+  <%= select_tag :category_id, options_from_collection_for_select(@categories, :id, :category, @category_id) %>
+  <%= submit_tag "Filter by Category" %>
+  <% end %>
 
 
 <ul class="shouts">

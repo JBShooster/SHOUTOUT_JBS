@@ -10,27 +10,27 @@
 <% end %>
 </div>
 
-<%= form_for(@profile, url: profiles_path, method: "post") do |f|%>
-
-
-  <%= f.label :username  %>
-  <%= f.text_field :username, placeholder: "Name...", autofocus: true %>
-
-  <%= f.label :email %>
-  <%= f.text_field :email, placeholder: "Email..." %>
-
-
-  <%= f.label :password %>
-  <%= f.password_field :password, placeholder: "Password..."  %>
-
-  <%= f.label :phone_number %>
-  <%= f.text_field :phone_number %>
-
-  
-  <%= f.label(:notification, "Notify me about new shouts!") %>
-  <%= f.check_box(:notification) %>
-
-  <%= f.submit("Signup", class: "btn btn-primary") %>
-</p>
-  <%= link_to "Have an account already? Log in here", site_login_path %>
-<% end %>
+<div class="login_box">
+  <%= form_for(@profile, url: profiles_path, method: "post") do |f|%>
+  <p>
+    <%= f.text_field :username, placeholder: "Name...", autofocus: true %>
+  </p>
+  <p>
+    <%= f.text_field :email, placeholder: "Email..." %>
+  </p>
+  <p>
+    <%= f.password_field :password, placeholder: "Password..."  %>
+  </p>
+  <p>
+    <%= f.text_field :phone_number %>
+  </p>
+  <p>  
+    <%= f.label(:notification, "Notify me about new shouts!") %>
+    <%= f.check_box(:notification) %>
+  </p>
+  <p>
+    <%= f.submit("Signup", class: "btn btn-primary") %>
+  </p>
+    <%= link_to "Have an account already? Log in here", site_login_path %>
+  <% end %>
+</div>
